@@ -2,8 +2,8 @@ version: '3.8'
 
 services:
   web:
-    image: reginakost/docker:web
-    container_name: docker
+    image: reginakost/dockerweb:latest
+    container_name: dockerweb
     restart: unless-stopped
     hostname: reginakost
     network_mode: bridge
@@ -26,8 +26,8 @@ services:
       - POSTGRES_DB=hello_django_dev
       
   nginx:
-    image: reginakost/docker:nginx
-    container_name: docker
+    image: reginakost/dockernginx:latest
+    container_name: dockernginx
     restart: unless-stopped
     hostname: reginakost
     network_mode: bridge
